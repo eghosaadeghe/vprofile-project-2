@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    tools {
+        maven "MAVEN3"
+        jdk "OracleJDK8"
+    }
+
     environment {
         SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
@@ -7,11 +12,10 @@ pipeline {
         RELEASE_REPO = 'vprofile-release'
         CENTRAL_REPO = 'vpro-maven-central'
         NEXUSIP = '172.31.16.102'
-        NEXUS = '8081'
+        NEXUSPORT = '8081'
         NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
     }
-    
     stages {
         stage('Build'){
             steps {
