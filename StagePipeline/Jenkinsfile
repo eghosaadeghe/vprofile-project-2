@@ -11,7 +11,7 @@ pipeline {
 		NEXUS_PASS = 'admin123'
 		RELEASE_REPO = 'vprofile-release'
 		CENTRAL_REPO = 'vpro-maven-central'
-		NEXUSIP = '54.91.132.137'
+		NEXUSIP = '54.226.44.97'
 		NEXUSPORT = '8081'
 		NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
@@ -65,6 +65,7 @@ pipeline {
               }
             }
         }
+
 
         stage("UploadArtifact"){
             steps{
